@@ -17,7 +17,7 @@ PeliPal es una aplicación para gestionar la búsqueda, descarga y ratings de pe
 ## 📦 Instalación
 
 ```bash
-git clone https://github.com/TU_USUARIO/cineapp.git
+git clone https://github.com/TU_USUARIO/pelipal.git
 cd pelipal
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
