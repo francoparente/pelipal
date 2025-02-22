@@ -10,4 +10,4 @@ def search_movies(query: str):
 
 @router.get("/movies/download")
 def download_movie(torrent_url: str):
-    return {"file_path": download_manager.download_torrent(torrent_url, "downloads")}
+    return download_manager.download_torrent(torrent_url)
