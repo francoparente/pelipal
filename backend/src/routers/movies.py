@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.services.download_manager import DownloadManager
+from backend.src.services.download_manager import DownloadManager
 
 router = APIRouter()
 download_manager = DownloadManager()
