@@ -1,13 +1,15 @@
 from fastapi import APIRouter
-from backend.src.services.download_manager import DownloadManager
+from backend.src.services.download_manager import DownloadManagerService
+from backend.src.services.movie_search import MovieSearchService
 
 router = APIRouter()
-download_manager = DownloadManager()
+downloader = DownloadManagerService()
+searcher = MovieSearchService()
 
 @router.get("/movies/search")
-def search_movies(query: str):
-    return download_manager.search_movie(query)
+def search_movies(movie_title: str):
+    return searcher.search_movie(movie_title)
 
 @router.get("/movies/download")
 def download_movie(torrent_url: str):
-    return download_manager.download_torrent(torrent_url)
+    return downloader.download_torrent(torrent_url)

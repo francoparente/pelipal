@@ -2,17 +2,11 @@ import requests
 import subprocess
 import os
 
-class DownloadManager:
-    BASE_URL = "https://yts.mx/api/v2"
-    DOWNLOAD_PATH = "downloads"
+class DownloadManagerService:
+    DOWNLOAD_PATH = "/mnt/e/Videos/Movies"
 
     def __init__(self):
         os.makedirs(self.DOWNLOAD_PATH, exist_ok=True)
-
-    def search_movie(self, query: str):
-        """Busca una película en YTS y devuelve los resultados."""
-        response = requests.get(f"{self.BASE_URL}/list_movies.json", params={"query_term": query})
-        return response.json()
 
     def download_torrent(self, torrent_url: str):
         """Descarga y ejecuta un torrent con aria2c."""
