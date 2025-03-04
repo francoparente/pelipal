@@ -28,7 +28,9 @@ class MovieSearchService:
         hdd_result = self.search_in_hdd(movie_title)
         if hdd_result:
             return {"source": "HDD", "path": hdd_result}
+        
         yts_result = self.search_in_yts(movie_title)
         if yts_result:
             return {"source": "YTS", "data": yts_result}
+        
         return None
