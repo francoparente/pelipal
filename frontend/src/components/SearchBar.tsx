@@ -13,7 +13,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
       const response = await api.get("/movies/search", {
         params: { movie_title: query },
       });
-      console.log("Respuesta del backend:", response.data);
+      console.log("Backend response:", response.data);
       onSearch(response.data);
     } catch (error) {
       console.error("Error searching movie:", error);
@@ -26,14 +26,14 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Buscar película..."
+        placeholder="Search movie..."
         className="p-2 border rounded"
       />
       <button
         onClick={handleSearch}
         className="p-2 bg-blue-500 text-white rounded"
       >
-        Buscar
+        Search
       </button>
     </div>
   );
