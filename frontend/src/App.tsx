@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Buscador de Películas</h1>
+      <h1 className="text-2xl font-bold mb-4">PELIPAL</h1>
       <SearchBar onSearch={setSearchResults} />
       <SearchResults results={searchResults} />
     </div>

@@ -23,7 +23,7 @@ interface Movie {
     if (results.source === "HDD") {
       return (
         <div className="mt-4 p-4 bg-green-100 rounded">
-          <p>La película ya está descargada en:</p>
+          <p>Movie was found in:</p>
           <ul>
             {results.path?.map((path, index) => (
               <li key={index}>{path}</li>
@@ -36,7 +36,7 @@ interface Movie {
     if (results.source === "YTS") {
         return (
           <div className="mt-4">
-            <h2 className="text-xl font-bold">Resultados de YTS:</h2>
+            <h2 className="text-xl font-bold">YTS results:</h2>
             <ul className="space-y-2">
               {results.data?.data.movies.map((movie) => (
                 <li
