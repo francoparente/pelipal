@@ -14,10 +14,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Permite solicitudes desde el frontend
+    # allow_origins=["http://192.168.0.159:5173"],  # Permite solicitudes desde el frontend
+    allow_origins=["*"],  # Allow requests from any origin
     allow_credentials=True,
-    allow_methods=["*"],  # Permite todos los métodos (GET, POST, etc.)
-    allow_headers=["*"],  # Permite todos los encabezados
+    allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
 )
 
 app.include_router(movies.router)

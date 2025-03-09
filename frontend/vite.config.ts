@@ -17,4 +17,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    port: 5173, // Puerto del servidor de desarrollo (opcional, 5173 es el predeterminado)
+    host: '0.0.0.0', // Host del servidor de desarrollo (opcional, 'localhost' es el predeterminado)
+    proxy: {
+      '/api': {
+        target: 'http://192.168.0.159:8000', // Cambia localhost por tu IP
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 })
