@@ -7,8 +7,6 @@ assignees: francoparente
 
 ---
 
-### Subtask: [subtask title
-
 **Description**:  
 [Provide a clear and concise description of what needs to be done.]
 
