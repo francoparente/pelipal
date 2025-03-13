@@ -22,9 +22,9 @@ export default defineConfig({
     host: '0.0.0.0', // Host del servidor de desarrollo (opcional, 'localhost' es el predeterminado)
     proxy: {
       '/api': {
-        target: 'http://192.168.0.159:8000', // Cambia localhost por tu IP
+        target: 'http://192.168.0.159:8000',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ''), // replaces /api with ''
       },
     },
   },

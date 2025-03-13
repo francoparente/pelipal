@@ -1,0 +1,19 @@
+{
+    "folders": [
+      {
+        "path": "."
+      }
+    ],
+    "settings": {
+      "python.testing.pytestEnabled": true,
+      "python.testing.unittestEnabled": false,
+      "python.testing.nosetestsEnabled": false,
+      "python.testing.pytestArgs": [
+        "backend/tests"
+      ],
+      "python.analysis.extraPaths": [
+        "./backend/src"
+      ],
+      "terminal.integrated.cwd": "${workspaceFolder}"
+    }
+  }
