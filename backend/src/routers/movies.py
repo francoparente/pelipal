@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from backend.src.services.download_manager import DownloadManagerService
 from backend.src.services.movie_search import MovieSearchService
 
-router = APIRouter()
+router = APIRouter(prefix='/api')
 downloader = DownloadManagerService()
 searcher = MovieSearchService()
 
