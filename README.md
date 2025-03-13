@@ -1,4 +1,4 @@
-# 🎬 PeliPal
+[# 🎬 PeliPal
 
 PeliPal es una aplicación para gestionar la búsqueda, descarga y ratings de películas desde distintas fuentes.  
 
@@ -21,4 +21,4 @@ git clone https://github.com/TU_USUARIO/pelipal.git
 cd pelipal
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r requirements.txt]: #
